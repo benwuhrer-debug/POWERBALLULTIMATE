@@ -1,0 +1,6 @@
+{
+  "name": "Powerball Simulator",
+  "description": "A high-fidelity Powerball lottery and Bidding War simulator with customizable luck parameters, P2P item trading, forex markets, and an overpowered admin command panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

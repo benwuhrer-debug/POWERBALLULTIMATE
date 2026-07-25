@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* 🚀 KEYFRAME ANIMATIONS & DECORATIVE STYLINGS */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  105% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 💻 CUSTOM CHROME TERMINAL SCROLLBARS */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* Extra grid setup helper specs */
+@utility grid-cols-15 {
+  grid-template-columns: repeat(15, minmax(0, 1fr));
+}
+
+@utility grid-cols-13 {
+  grid-template-columns: repeat(13, minmax(0, 1fr));
+}
+
+/* 🎥 RETRO CINEMATICS SCANLINES & INTENSIVE SCREEN VIBRATION */
+@keyframes appShake {
+  0% { transform: translate(2px, 2px) rotate(0deg); }
+  20% { transform: translate(-3px, -1px) rotate(-0.5deg); }
+  45% { transform: translate(-1px, 3px) rotate(0.5deg); }
+  70% { transform: translate(3px, -2px) rotate(-0.5deg); }
+  100% { transform: translate(-2px, 1px) rotate(0deg); }
+}
+
+.crt-scanlayer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.18) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.015), rgba(0, 0, 255, 0.03));
+  background-size: 100% 3px, 5px 100%;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
